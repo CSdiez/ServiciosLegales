@@ -1,0 +1,337 @@
+/* ===========RESETS=========== */
+:root{
+    --black: #131313;
+    --white: #fff;
+    --color-primary: rgb(218, 214, 5);
+}
+*{
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* ===========HEADER=========== */
+.header{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/main.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: var(--white);
+}
+.text-principal{
+    text-shadow: 0px 0px 25px #000000;
+}
+
+.menu{
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    display:flex;
+    width: 100%;
+    align-items: center;
+    padding: 5px 0px;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.menu .logo img{
+    margin-left: 25px;
+    height: 3em;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.list li a{
+    margin-left: 25px;
+    padding: 20px 15px;
+    color: #fff;
+}
+
+.list li a:hover{
+    background-color: var(--black);
+
+}
+.relative{
+    position: relative;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    margin-top: 17px;
+    right: 4px;
+
+}
+.relative:hover > .submenu{
+    display: block;
+}
+.submenu li{
+    text-align: center;
+    padding: 12px 0px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.submenu li:hover{
+    background-color: var(--black);
+}
+.submenu li a{
+    padding: 12px 60px;
+    margin:0px
+}
+
+.redes{
+    margin-right: 25px;
+}
+.redes a i{
+    width: 30px;
+    color: #fff;
+}
+.redes a i:hover{   
+    color: var(--color-primary);
+}
+.text-principal{
+    color: #fff;
+}
+/*--------------------------------------------*/
+.nav2{
+    display: none;
+    width: 100%;
+}
+.navResponsive{
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+.responsive{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.responsive a img{
+    width: 60%;
+}
+.menu-button{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 30px;
+    padding: 10px;
+    cursor:pointer;
+}
+
+.menu-button span{
+    width: 40px;
+    height: 5px;
+    background: var(--white);
+    border-radius: 15px;
+}
+.menu-toggle{
+    display: block;
+    position: relative;
+    animation-name: example;
+}
+.toggle{
+    position: absolute;
+    display:none;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    right: 0px;
+    margin:10px 0px;
+    padding: 0px;
+
+}
+.toggle li{
+    list-style: none;
+    display: block;
+    padding: 20px 0;
+    color: #fafafa
+}
+.toggle li:hover{
+    background-color: var(--black);
+}
+.toggle li a{
+    text-decoration: none;
+    color: var(--white);
+}
+.toggle li a:hover{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+.menu-toggle:checked + .toggle{
+    display: block;
+}
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+@keyframes example {
+    0%   {right:-300px;}
+    100% {right:0px;}
+}
+
+/* ===========MAIN=========== */
+
+.perfil{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 700px;
+    position: relative;
+    background-image: url(assets/bglogo.png);
+    background-position: -180px 110px;
+    background-repeat: no-repeat;
+    background-size: 400px;
+}
+
+.office{
+    height: 500px;
+}
+
+.perfil .description{
+    padding: 10px 150px 0px 50px;
+
+}
+.description h2{
+    color: var(--black);
+    font-size: 2.3rem;
+}
+.description p{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+/* ===========SERVICIOS LEGALES=========== */
+
+.servicios{
+    background-color: rgba(230,230,230);
+    padding: 40px 20px 100px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no wrap;
+    align-items: center;
+}
+.servicios h2{
+    color: #000;
+}
+
+.art-text h3,p{
+    color: #000;
+}
+.art-container{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.art-text{
+    text-align: end;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.art-container img{
+    width: 30%;
+}
+
+div{
+    display: inline-block;
+}
+/* ===========ACTUALIDAD DESTACADA=========== */
+
+.act-dest {
+    padding: 20px;
+}
+.act-dest h2{
+    color: var(--black);
+    padding: 20px;
+    text-align: center;
+}
+.articlesContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.infoArticles {
+    width: 300px;
+    text-align: left;
+}
+.infoArticles img{
+    width: 300px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+}
+.infoArticles h3{
+    color: var(--black);
+}
+/* ===========PERFIL ACADEMICO=========== */
+
+/* ===========FOOTER=========== */
+@media all and (max-width: 1060px){
+    .list li a{
+        padding: 0px;
+    }
+    .redes{
+        margin: 10px;
+    }
+    .list{
+        padding: 0px;
+    }
+    .list a{
+  
+        margin:0px;
+    }
+    .redes a i{
+        width: auto;
+        margin-left: 10px;
+    }
+}
+@media all and (max-width: 900px){
+    .header{
+        height: 100vh;
+    }
+    .menu{
+        display: none;
+    }
+    .nav2{
+        display: block;
+    }
+    .text-principal{
+        padding: 0px 20px;
+        margin: 10px;
+        text-align: center;
+    }
+    .perfil .description{
+        padding: 30px;
+    }
+    .office{
+        display: none;
+    }
+    .articlesContainer{
+        flex-direction: column;
+    }
+}
